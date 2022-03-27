@@ -30,7 +30,7 @@ public class Product {
 	private double minStock;
 	@NotNull
 	@ManyToOne
-	@JoinColumn(name = " id_user ", referencedColumnName = " id ", nullable = false)
+	@JoinColumn(name = " category_id ", referencedColumnName = " id ", nullable = false)
 	@JsonIgnore
 	private Category category;
 
