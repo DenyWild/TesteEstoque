@@ -2,7 +2,6 @@ package com.example.stock.entities;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -26,7 +25,7 @@ public class Category {
 	@NotBlank
 	private String name;
 	@NotNull
-	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
 	@JsonIgnore
 	private List<Product> listOfProducts;
 
